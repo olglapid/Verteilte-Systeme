@@ -21,8 +21,9 @@ public class Broker {
 
 	public static void broker() {
 
-		BrokerTask newMessage = new BrokerTask();	//?
-
+		Message message = endpoint.blockingReceive();
+		BrokerTask newMessage = new BrokerTask();
+		newMessage.test(message);
 	}
 
 	public static void register(InetSocketAddress sender) {
@@ -66,10 +67,10 @@ public class Broker {
 	
 	public class BrokerTask  implements Runnable {
 		
-		public void test(){
+		
+		
+		public void test(Message message){
 			while (true) {
-	
-				Message message = endpoint.blockingReceive();
 	
 				if (message.getPayload() instanceof RegisterRequest) {
 	
