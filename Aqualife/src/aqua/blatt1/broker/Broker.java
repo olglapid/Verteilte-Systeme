@@ -1,6 +1,8 @@
 package aqua.blatt1.broker;
 
 import java.net.InetSocketAddress;
+import java.util.concurrent.ExecutorService;
+
 import aqua.blatt1.common.Direction;
 import aqua.blatt1.common.msgtypes.DeregisterRequest;
 import aqua.blatt1.common.msgtypes.HandoffRequest;
@@ -19,25 +21,8 @@ public class Broker {
 
 	public static void broker() {
 
-		while (true) {
+		BrokerTask newMessage = new BrokerTask();	//?
 
-			Message message = endpoint.blockingReceive();
-
-			if (message.getPayload() instanceof RegisterRequest) {
-
-				register(message.getSender());
-
-			} else if (message.getPayload() instanceof HandoffRequest) {
-
-				handoff(message.getSender(), (HandoffRequest) message.getPayload());
-
-			} else if (message.getPayload() instanceof DeregisterRequest) {
-
-				deregister((DeregisterRequest) message.getPayload());
-
-			}
-
-		}
 	}
 
 	public static void register(InetSocketAddress sender) {
@@ -77,5 +62,51 @@ public class Broker {
 
 	public static void main(String args[]) {
 		broker();
+	}
+	
+	public class BrokerTask  implements Runnable {
+		
+		public void test(){
+			while (true) {
+	
+				Message message = endpoint.blockingReceive();
+	
+				if (message.getPayload() instanceof RegisterRequest) {
+	
+					register(message.getSender());
+	
+				} else if (message.getPayload() instanceof HandoffRequest) {
+	
+					handoff(message.getSender(), (HandoffRequest) message.getPayload());
+	
+				} else if (message.getPayload() instanceof DeregisterRequest) {
+	
+					deregister((DeregisterRequest) message.getPayload());
+	
+				}
+	
+			}
+		}
+
+		int NUM_THREADS = 5;	//beispiel;
+		@Override
+		public void run() {
+			// TODO Auto-generated method stub		
+		}
+		
+		Thread thread = new Thread(new BrokerTask());
+		thread.start();
+		
+		
+		ExecutorService executor = Executors.newFixedThreadPool(NUM_THREADS);
+//				while(true){
+//					executor.execute(new Runnable(){
+//						public void run(){
+//						// Implementierung der Task
+//						}
+//					});
+//				}
+//		executor.shutdown();
+		
 	}
 }
