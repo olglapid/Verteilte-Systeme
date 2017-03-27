@@ -64,11 +64,13 @@ public class Broker {
 
 	public static void deregister(DeregisterRequest deregisterRequest) {
 
+		lock.writeLock().lock;
 		int index = list.indexOf(deregisterRequest.getId());
 
 		if (index != -1) {
 			list.remove(index);
 		}
+		lock.writeLock().unlock;
 
 	}
 
