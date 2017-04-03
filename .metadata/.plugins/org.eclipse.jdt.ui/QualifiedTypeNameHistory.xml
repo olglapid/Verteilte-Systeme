@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="aqua.blatt1.common.msgtypes.HandoffRequest"/>
+<fullyQualifiedTypeName name="aqua.blatt1.common.Direction"/>
+<fullyQualifiedTypeName name="java.net.InetSocketAddress"/>
+<fullyQualifiedTypeName name="messaging.Endpoint"/>
+<fullyQualifiedTypeName name="aqua.blatt1.common.msgtypes.DeregisterRequest"/>
+<fullyQualifiedTypeName name="java.util.concurrent.ExecutorService"/>
+<fullyQualifiedTypeName name="java.util.concurrent.Executors"/>
+<fullyQualifiedTypeName name="aqua.blatt1.broker.Broker.BrokerTask"/>
+<fullyQualifiedTypeName name="java.util.concurrent.locks.ReadWriteLock"/>
+<fullyQualifiedTypeName name="java.util.concurrent.locks.ReentrantReadWriteLock"/>
+</qualifiedTypeNameHistroy>

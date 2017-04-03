@@ -1,0 +1,18 @@
+package aqua.blatt1.common.msgtypes;
+
+import java.io.Serializable;
+import java.net.InetSocketAddress;
+
+@SuppressWarnings("serial")
+public class NeighborUpdate implements Serializable {
+	private InetSocketAddress adress;
+	
+	public NeighborUpdate(InetSocketAddress adress) {
+		this.adress = adress;
+	}
+	
+	public InetSocketAddress getAdress() {
+		return adress;
+	}
+
+}

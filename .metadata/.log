@@ -1,0 +1,983 @@
+!SESSION 2017-03-15 14:20:07.731 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_101
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_DE
+Framework arguments:  -product org.eclipse.epp.package.dsl.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.dsl.product
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2017-03-15 14:21:30.327
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: Invalid argument: create. ; version: 1.100.0.v20160217-0435
+!STACK 0
+java.net.SocketException: Invalid argument: create
+	at java.net.Socket.createImpl(Unknown Source)
+	at java.net.Socket.getImpl(Unknown Source)
+	at java.net.Socket.setSoTimeout(Unknown Source)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:110)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:319)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at org.apache.http.client.fluent.Executor.execute(Executor.java:206)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.request(IO.java:205)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:68)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.oomph.setup.core 2 0 2017-03-15 14:21:31.306
+!MESSAGE Invalid argument: create
+!STACK 0
+org.eclipse.oomph.util.IOExceptionWithCause: Invalid argument: create
+	at org.eclipse.oomph.setup.internal.core.util.ECFURIHandlerImpl.createInputStream(ECFURIHandlerImpl.java:295)
+	at org.eclipse.emf.ecore.resource.impl.ExtensibleURIConverterImpl.createInputStream(ExtensibleURIConverterImpl.java:360)
+	at org.eclipse.oomph.setup.internal.core.util.SetupCoreUtil.handleArchiveRedirection(SetupCoreUtil.java:383)
+	at org.eclipse.oomph.setup.internal.core.util.SetupCoreUtil.configureResourceSet(SetupCoreUtil.java:365)
+	at org.eclipse.oomph.setup.internal.core.util.SetupCoreUtil.createResourceSet(SetupCoreUtil.java:133)
+	at org.eclipse.oomph.setup.ui.recorder.RecorderManager.<clinit>(RecorderManager.java:119)
+	at org.eclipse.oomph.setup.ui.SetupUIPlugin.performStartup(SetupUIPlugin.java:196)
+	at org.eclipse.oomph.setup.ui.EarlyStartup.earlyStartup(EarlyStartup.java:22)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.runEarlyStartup(EarlyStartupRunnable.java:90)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:68)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench$56.run(Workbench.java:2852)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.net.SocketException: Invalid argument: create
+	at java.net.Socket.createImpl(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient4.ECFHttpClientProtocolSocketFactory.connectSocket(ECFHttpClientProtocolSocketFactory.java:86)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:177)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1077)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.openStreams(HttpClientRetrieveFileTransfer.java:618)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:885)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:576)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:106)
+	at org.eclipse.oomph.setup.internal.core.util.ECFURIHandlerImpl.createInputStream(ECFURIHandlerImpl.java:232)
+	... 12 more
+
+!ENTRY org.eclipse.oomph.setup.core 2 0 2017-03-15 14:21:31.326
+!MESSAGE Invalid argument: create
+!STACK 0
+org.eclipse.oomph.util.IOExceptionWithCause: Invalid argument: create
+	at org.eclipse.oomph.setup.internal.core.util.ECFURIHandlerImpl.createInputStream(ECFURIHandlerImpl.java:295)
+	at org.eclipse.emf.ecore.resource.impl.ExtensibleURIConverterImpl.createInputStream(ExtensibleURIConverterImpl.java:360)
+	at org.eclipse.oomph.setup.internal.core.util.SetupCoreUtil.handleArchiveRedirection(SetupCoreUtil.java:383)
+	at org.eclipse.oomph.setup.internal.core.util.SetupCoreUtil.configureResourceSet(SetupCoreUtil.java:365)
+	at org.eclipse.oomph.setup.internal.core.util.SetupCoreUtil.createResourceSet(SetupCoreUtil.java:133)
+	at org.eclipse.oomph.setup.ui.SetupUIPlugin$1$2.run(SetupUIPlugin.java:264)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.net.SocketException: Invalid argument: create
+	at java.net.Socket.createImpl(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient4.ECFHttpClientProtocolSocketFactory.connectSocket(ECFHttpClientProtocolSocketFactory.java:86)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:177)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1077)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.openStreams(HttpClientRetrieveFileTransfer.java:618)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:885)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:576)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:106)
+	at org.eclipse.oomph.setup.internal.core.util.ECFURIHandlerImpl.createInputStream(ECFURIHandlerImpl.java:232)
+	... 6 more
+
+!ENTRY org.eclipse.oomph.setup.core 2 0 2017-03-15 14:21:31.346
+!MESSAGE Invalid argument: create
+!STACK 0
+org.eclipse.oomph.util.IOExceptionWithCause: Invalid argument: create
+	at org.eclipse.oomph.setup.internal.core.util.ECFURIHandlerImpl.createInputStream(ECFURIHandlerImpl.java:295)
+	at org.eclipse.emf.ecore.resource.impl.ExtensibleURIConverterImpl.createInputStream(ExtensibleURIConverterImpl.java:360)
+	at org.eclipse.oomph.setup.internal.core.util.SetupCoreUtil.handleArchiveRedirection(SetupCoreUtil.java:383)
+	at org.eclipse.oomph.setup.internal.core.util.SetupCoreUtil.configureResourceSet(SetupCoreUtil.java:365)
+	at org.eclipse.oomph.setup.internal.core.util.SetupCoreUtil.createResourceSet(SetupCoreUtil.java:133)
+	at org.eclipse.oomph.setup.internal.core.util.UserURIHandlerImpl.create(UserURIHandlerImpl.java:195)
+	at org.eclipse.oomph.setup.internal.core.util.UserURIHandlerImpl.exists(UserURIHandlerImpl.java:106)
+	at org.eclipse.emf.ecore.resource.impl.ExtensibleURIConverterImpl.exists(ExtensibleURIConverterImpl.java:378)
+	at org.eclipse.oomph.setup.ui.SetupUIPlugin$2.run(SetupUIPlugin.java:298)
+	at org.eclipse.oomph.util.WorkerPool.begin(WorkerPool.java:119)
+	at org.eclipse.oomph.setup.internal.core.util.ResourceMirror.begin(ResourceMirror.java:113)
+	at org.eclipse.oomph.setup.ui.SetupUIPlugin.mirror(SetupUIPlugin.java:309)
+	at org.eclipse.oomph.setup.ui.SetupUIPlugin.access$4(SetupUIPlugin.java:287)
+	at org.eclipse.oomph.setup.ui.SetupUIPlugin$1$2.run(SetupUIPlugin.java:266)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.net.SocketException: Invalid argument: create
+	at java.net.Socket.createImpl(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient4.ECFHttpClientProtocolSocketFactory.connectSocket(ECFHttpClientProtocolSocketFactory.java:86)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:177)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1077)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.openStreams(HttpClientRetrieveFileTransfer.java:618)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:885)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:576)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:106)
+	at org.eclipse.oomph.setup.internal.core.util.ECFURIHandlerImpl.createInputStream(ECFURIHandlerImpl.java:232)
+	... 14 more
+
+!ENTRY org.eclipse.oomph.setup.core 2 0 2017-03-15 14:21:31.494
+!MESSAGE Invalid argument: create
+!STACK 0
+org.eclipse.oomph.util.IOExceptionWithCause: Invalid argument: create
+	at org.eclipse.oomph.setup.internal.core.util.ECFURIHandlerImpl.createInputStream(ECFURIHandlerImpl.java:295)
+	at org.eclipse.emf.ecore.resource.impl.ExtensibleURIConverterImpl.createInputStream(ExtensibleURIConverterImpl.java:360)
+	at org.eclipse.oomph.setup.internal.core.util.SetupCoreUtil.handleArchiveRedirection(SetupCoreUtil.java:383)
+	at org.eclipse.oomph.setup.internal.core.util.SetupCoreUtil.configureResourceSet(SetupCoreUtil.java:365)
+	at org.eclipse.oomph.setup.internal.core.util.SetupCoreUtil.createResourceSet(SetupCoreUtil.java:133)
+	at org.eclipse.oomph.setup.internal.core.SetupContext.associate(SetupContext.java:359)
+	at org.eclipse.oomph.setup.internal.core.SetupContext.createSelf(SetupContext.java:238)
+	at org.eclipse.oomph.setup.ui.SetupUIPlugin$1$2.run(SetupUIPlugin.java:267)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.net.SocketException: Invalid argument: create
+	at java.net.Socket.createImpl(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient4.ECFHttpClientProtocolSocketFactory.connectSocket(ECFHttpClientProtocolSocketFactory.java:86)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:177)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1077)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.openStreams(HttpClientRetrieveFileTransfer.java:618)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:885)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:576)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:106)
+	at org.eclipse.oomph.setup.internal.core.util.ECFURIHandlerImpl.createInputStream(ECFURIHandlerImpl.java:232)
+	... 8 more
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-03-15 14:22:26.828
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'z:\'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.oomph.p2.core 4 0 2017-03-15 15:26:03.611
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Exception in org.eclipse.oomph.p2.internal.core.P2CorePlugin$Implementation.stop() of bundle org.eclipse.oomph.p2.core.
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:847)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:955)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:323)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:144)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:159)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.ExceptionInInitializerError
+	at org.eclipse.oomph.p2.internal.core.AgentImpl.initializeProvisioningAgent(AgentImpl.java:466)
+	at org.eclipse.oomph.p2.internal.core.AgentImpl.getProvisioningAgent(AgentImpl.java:479)
+	at org.eclipse.oomph.p2.internal.core.AgentImpl.getProfileRegistry(AgentImpl.java:272)
+	at org.eclipse.oomph.p2.internal.core.AgentImpl$1.initializeFirstTime(AgentImpl.java:98)
+	at org.eclipse.oomph.p2.internal.core.PersistentMap.load(PersistentMap.java:111)
+	at org.eclipse.oomph.p2.internal.core.AgentImpl.<init>(AgentImpl.java:138)
+	at org.eclipse.oomph.p2.internal.core.AgentManagerImpl$1.createElement(AgentManagerImpl.java:91)
+	at org.eclipse.oomph.p2.internal.core.AgentManagerImpl$1.createElement(AgentManagerImpl.java:1)
+	at org.eclipse.oomph.p2.internal.core.PersistentMap.addElement(PersistentMap.java:151)
+	at org.eclipse.oomph.p2.internal.core.AgentManagerImpl.addAgent(AgentManagerImpl.java:221)
+	at org.eclipse.oomph.p2.internal.core.AgentManagerImpl$1.initializeFirstTime(AgentManagerImpl.java:104)
+	at org.eclipse.oomph.p2.internal.core.PersistentMap.load(PersistentMap.java:111)
+	at org.eclipse.oomph.p2.internal.core.AgentManagerImpl.<init>(AgentManagerImpl.java:141)
+	at org.eclipse.oomph.p2.internal.core.AgentManagerImpl.<init>(AgentManagerImpl.java:63)
+	at org.eclipse.oomph.p2.core.P2Util.getAgentManager(P2Util.java:54)
+	at org.eclipse.oomph.p2.internal.core.P2CorePlugin$Implementation.stop(P2CorePlugin.java:83)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	... 13 more
+Caused by: java.lang.NullPointerException
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Artifact.<clinit>(CachingRepositoryManager.java:440)
+	... 33 more
+Root exception:
+java.lang.ExceptionInInitializerError
+	at org.eclipse.oomph.p2.internal.core.AgentImpl.initializeProvisioningAgent(AgentImpl.java:466)
+	at org.eclipse.oomph.p2.internal.core.AgentImpl.getProvisioningAgent(AgentImpl.java:479)
+	at org.eclipse.oomph.p2.internal.core.AgentImpl.getProfileRegistry(AgentImpl.java:272)
+	at org.eclipse.oomph.p2.internal.core.AgentImpl$1.initializeFirstTime(AgentImpl.java:98)
+	at org.eclipse.oomph.p2.internal.core.PersistentMap.load(PersistentMap.java:111)
+	at org.eclipse.oomph.p2.internal.core.AgentImpl.<init>(AgentImpl.java:138)
+	at org.eclipse.oomph.p2.internal.core.AgentManagerImpl$1.createElement(AgentManagerImpl.java:91)
+	at org.eclipse.oomph.p2.internal.core.AgentManagerImpl$1.createElement(AgentManagerImpl.java:1)
+	at org.eclipse.oomph.p2.internal.core.PersistentMap.addElement(PersistentMap.java:151)
+	at org.eclipse.oomph.p2.internal.core.AgentManagerImpl.addAgent(AgentManagerImpl.java:221)
+	at org.eclipse.oomph.p2.internal.core.AgentManagerImpl$1.initializeFirstTime(AgentManagerImpl.java:104)
+	at org.eclipse.oomph.p2.internal.core.PersistentMap.load(PersistentMap.java:111)
+	at org.eclipse.oomph.p2.internal.core.AgentManagerImpl.<init>(AgentManagerImpl.java:141)
+	at org.eclipse.oomph.p2.internal.core.AgentManagerImpl.<init>(AgentManagerImpl.java:63)
+	at org.eclipse.oomph.p2.core.P2Util.getAgentManager(P2Util.java:54)
+	at org.eclipse.oomph.p2.internal.core.P2CorePlugin$Implementation.stop(P2CorePlugin.java:83)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:955)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:323)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:144)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:159)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Artifact.<clinit>(CachingRepositoryManager.java:440)
+	... 33 more
+!SESSION 2017-03-17 08:09:16.196 -----------------------------------------------
+eclipse.buildId=4.6.2.M20161124-1400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_DE
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.ui 2 0 2017-03-17 08:10:32.379
+!MESSAGE Warnings while parsing the key bindings from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.bindings' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-03-17 08:10:32.379
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.papyrus.revisiontool', id='org.eclipse.papyrus.revisiontool.commands.ReviewCreateHandler'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-03-17 08:10:32.379
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.papyrus.revisiontool', id='org.eclipse.papyrus.revisiontool.commands.deletereview'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-03-17 08:10:32.379
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.papyrus.revisiontool', id='org.eclipse.papyrus.revisiontool.commands.hookreview'
+
+!ENTRY org.eclipse.jface 2 0 2017-03-17 08:10:53.288
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-03-17 08:10:53.288
+!MESSAGE A conflict occurred for ALT+CTRL+T:
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.EditPropertiesCommand,Show Properties,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@308617d3,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.connector.local.command.launch,Open Local Terminal on Selection,
+		,
+		Category(org.eclipse.tm.terminal.view.ui.commands.category,Terminal Commands,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4659d776,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY com.google.gdt.eclipse.suite 1 0 2017-03-17 08:11:48.942
+!MESSAGE Registering: com.google.appengine.eclipse.sdkbundle_1.9.34
+
+!ENTRY com.google.gdt.eclipse.suite 1 0 2017-03-17 08:11:50.466
+!MESSAGE Registering: com.google.gwt.eclipse.sdkbundle_2.7.0
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-03-17 08:12:19.498
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'z:\'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.instantiations.eclipse 1 0 2017-03-17 08:12:34.274
+!MESSAGE StartupPlugin: could not add workbench property change listener (1) ... compatibility layer might not be installed.
+
+!ENTRY org.eclipse.ui 4 4 2017-03-17 08:16:27.705
+!MESSAGE Plug-in 'com.gwtplugins.gwt.eclipse.core' contributed an invalid Menu Extension (Path: 'com.gwtplugins.gdt.eclipse.suite.popupMenu.project' is invalid): com.gwtplugins.gwt.eclipse.core.popupMenu.project.gwtSettings
+
+!ENTRY org.eclipse.ui 4 4 2017-03-17 08:16:27.752
+!MESSAGE Plug-in 'com.gwtplugins.gwt.eclipse.core' contributed an invalid Menu Extension (Path: 'com.gwtplugins.gdt.eclipse.suite.popupMenu.project' is invalid): com.gwtplugins.gwt.eclipse.core.actions.GWTCompileProjectAction
+
+!ENTRY org.eclipse.ui 4 4 2017-03-17 08:16:29.854
+!MESSAGE Plug-in 'com.gwtplugins.gwt.eclipse.core' contributed an invalid Menu Extension (Path: 'com.gwtplugins.gdt.eclipse.suite.popupMenu.project' is invalid): com.gwtplugins.gwt.eclipse.core.popupMenu.project.gwtSettings
+
+!ENTRY org.eclipse.ui 4 4 2017-03-17 08:16:29.859
+!MESSAGE Plug-in 'com.gwtplugins.gwt.eclipse.core' contributed an invalid Menu Extension (Path: 'com.gwtplugins.gdt.eclipse.suite.popupMenu.project' is invalid): com.gwtplugins.gwt.eclipse.core.actions.GWTCompileProjectAction
+
+!ENTRY org.eclipse.ui 4 4 2017-03-17 08:17:53.723
+!MESSAGE Plug-in 'com.gwtplugins.gwt.eclipse.core' contributed an invalid Menu Extension (Path: 'com.gwtplugins.gdt.eclipse.suite.popupMenu.project' is invalid): com.gwtplugins.gwt.eclipse.core.popupMenu.project.gwtSettings
+
+!ENTRY org.eclipse.ui 4 4 2017-03-17 08:17:53.727
+!MESSAGE Plug-in 'com.gwtplugins.gwt.eclipse.core' contributed an invalid Menu Extension (Path: 'com.gwtplugins.gdt.eclipse.suite.popupMenu.project' is invalid): com.gwtplugins.gwt.eclipse.core.actions.GWTCompileProjectAction
+
+!ENTRY org.eclipse.ui 4 4 2017-03-17 08:18:34.390
+!MESSAGE Plug-in 'com.gwtplugins.gwt.eclipse.core' contributed an invalid Menu Extension (Path: 'com.gwtplugins.gdt.eclipse.suite.popupMenu.project' is invalid): com.gwtplugins.gwt.eclipse.core.popupMenu.project.gwtSettings
+
+!ENTRY org.eclipse.ui 4 4 2017-03-17 08:18:34.393
+!MESSAGE Plug-in 'com.gwtplugins.gwt.eclipse.core' contributed an invalid Menu Extension (Path: 'com.gwtplugins.gdt.eclipse.suite.popupMenu.project' is invalid): com.gwtplugins.gwt.eclipse.core.actions.GWTCompileProjectAction
+
+!ENTRY org.eclipse.ui 4 4 2017-03-17 08:19:19.365
+!MESSAGE Plug-in 'com.gwtplugins.gwt.eclipse.core' contributed an invalid Menu Extension (Path: 'com.gwtplugins.gdt.eclipse.suite.popupMenu.project' is invalid): com.gwtplugins.gwt.eclipse.core.popupMenu.project.gwtSettings
+
+!ENTRY org.eclipse.ui 4 4 2017-03-17 08:19:19.368
+!MESSAGE Plug-in 'com.gwtplugins.gwt.eclipse.core' contributed an invalid Menu Extension (Path: 'com.gwtplugins.gdt.eclipse.suite.popupMenu.project' is invalid): com.gwtplugins.gwt.eclipse.core.actions.GWTCompileProjectAction
+
+!ENTRY org.eclipse.launchbar.core 2 0 2017-03-17 08:19:30.436
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2017-03-17 08:19:30.442
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.ui 4 4 2017-03-17 08:19:42.653
+!MESSAGE Plug-in 'com.gwtplugins.gwt.eclipse.core' contributed an invalid Menu Extension (Path: 'com.gwtplugins.gdt.eclipse.suite.popupMenu.project' is invalid): com.gwtplugins.gwt.eclipse.core.popupMenu.project.gwtSettings
+
+!ENTRY org.eclipse.ui 4 4 2017-03-17 08:19:42.656
+!MESSAGE Plug-in 'com.gwtplugins.gwt.eclipse.core' contributed an invalid Menu Extension (Path: 'com.gwtplugins.gdt.eclipse.suite.popupMenu.project' is invalid): com.gwtplugins.gwt.eclipse.core.actions.GWTCompileProjectAction
+
+!ENTRY org.eclipse.ui 4 4 2017-03-17 08:20:30.584
+!MESSAGE Plug-in 'com.gwtplugins.gwt.eclipse.core' contributed an invalid Menu Extension (Path: 'com.gwtplugins.gdt.eclipse.suite.popupMenu.project' is invalid): com.gwtplugins.gwt.eclipse.core.popupMenu.project.gwtSettings
+
+!ENTRY org.eclipse.ui 4 4 2017-03-17 08:20:30.588
+!MESSAGE Plug-in 'com.gwtplugins.gwt.eclipse.core' contributed an invalid Menu Extension (Path: 'com.gwtplugins.gdt.eclipse.suite.popupMenu.project' is invalid): com.gwtplugins.gwt.eclipse.core.actions.GWTCompileProjectAction
+
+!ENTRY org.eclipse.ui 4 4 2017-03-17 08:21:15.792
+!MESSAGE Plug-in 'com.gwtplugins.gwt.eclipse.core' contributed an invalid Menu Extension (Path: 'com.gwtplugins.gdt.eclipse.suite.popupMenu.project' is invalid): com.gwtplugins.gwt.eclipse.core.popupMenu.project.gwtSettings
+
+!ENTRY org.eclipse.ui 4 4 2017-03-17 08:21:15.795
+!MESSAGE Plug-in 'com.gwtplugins.gwt.eclipse.core' contributed an invalid Menu Extension (Path: 'com.gwtplugins.gdt.eclipse.suite.popupMenu.project' is invalid): com.gwtplugins.gwt.eclipse.core.actions.GWTCompileProjectAction
+
+!ENTRY org.eclipse.core.variables 4 120 2017-03-17 08:21:45.421
+!MESSAGE Dynamic variable extension from bundle 'com.gwtplugins.gwt.eclipse.core' overrides existing extension variable 'unique_id' from bundle 'com.google.gwt.eclipse.core'
+
+!ENTRY com.instantiations.eclipse 1 0 2017-03-17 09:01:20.184
+!MESSAGE StartupPlugin: could not remove workbench property change listener (1) ... workbench might already be shut down.
+!SESSION 2017-03-17 09:17:15.682 -----------------------------------------------
+eclipse.buildId=4.6.2.M20161124-1400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_DE
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -data Z:\5 Semester\Verteilte Systeme2 -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.ui 2 0 2017-03-17 09:17:18.027
+!MESSAGE Warnings while parsing the key bindings from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.bindings' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-03-17 09:17:18.027
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.papyrus.revisiontool', id='org.eclipse.papyrus.revisiontool.commands.ReviewCreateHandler'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-03-17 09:17:18.027
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.papyrus.revisiontool', id='org.eclipse.papyrus.revisiontool.commands.deletereview'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-03-17 09:17:18.027
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.papyrus.revisiontool', id='org.eclipse.papyrus.revisiontool.commands.hookreview'
+
+!ENTRY org.eclipse.jface 2 0 2017-03-17 09:17:24.221
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-03-17 09:17:24.221
+!MESSAGE A conflict occurred for ALT+CTRL+T:
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.EditPropertiesCommand,Show Properties,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1145d71f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.connector.local.command.launch,Open Local Terminal on Selection,
+		,
+		Category(org.eclipse.tm.terminal.view.ui.commands.category,Terminal Commands,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1b36c5aa,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.jdt.core 4 0 2017-03-17 09:17:27.287
+!MESSAGE Invalid ZIP archive: Z:\5 Semester\Verteilte Systeme\Aqualife\aqua-blatt1-src.jar
+
+!ENTRY org.eclipse.jdt.core 4 0 2017-03-17 09:17:27.292
+!MESSAGE Invalid ZIP archive: Z:\5 Semester\Verteilte Systeme\Aqualife\aqua-blatt2-poison-src.jar
+
+!ENTRY org.eclipse.jdt.core 4 0 2017-03-17 09:17:27.297
+!MESSAGE Invalid ZIP archive: Z:\5 Semester\Verteilte Systeme\Aqualife\messaging.jar
+
+!ENTRY org.eclipse.jdt.core 4 0 2017-03-17 09:17:27.301
+!MESSAGE Invalid ZIP archive: Z:\5 Semester\Verteilte Systeme\Aqualife\messaging-javadoc.jar
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-03-17 09:17:28.611
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'z:\'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.instantiations.eclipse 1 0 2017-03-17 09:17:31.815
+!MESSAGE StartupPlugin: could not add workbench property change listener (1) ... compatibility layer might not be installed.
+
+!ENTRY org.eclipse.ui 4 4 2017-03-17 09:17:43.168
+!MESSAGE Plug-in 'com.gwtplugins.gwt.eclipse.core' contributed an invalid Menu Extension (Path: 'com.gwtplugins.gdt.eclipse.suite.popupMenu.project' is invalid): com.gwtplugins.gwt.eclipse.core.popupMenu.project.gwtSettings
+
+!ENTRY org.eclipse.ui 4 4 2017-03-17 09:17:43.187
+!MESSAGE Plug-in 'com.gwtplugins.gwt.eclipse.core' contributed an invalid Menu Extension (Path: 'com.gwtplugins.gdt.eclipse.suite.popupMenu.project' is invalid): com.gwtplugins.gwt.eclipse.core.actions.GWTCompileProjectAction
+
+!ENTRY org.eclipse.launchbar.core 2 0 2017-03-17 09:18:40.168
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2017-03-17 09:18:40.173
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.core.variables 4 120 2017-03-17 09:18:40.235
+!MESSAGE Dynamic variable extension from bundle 'com.gwtplugins.gwt.eclipse.core' overrides existing extension variable 'unique_id' from bundle 'com.google.gwt.eclipse.core'
+
+!ENTRY com.instantiations.eclipse 1 0 2017-03-17 09:29:51.506
+!MESSAGE StartupPlugin: could not remove workbench property change listener (1) ... workbench might already be shut down.
+!SESSION 2017-03-20 09:58:45.558 -----------------------------------------------
+eclipse.buildId=4.5.0.I20150603-2000
+java.version=1.8.0_101
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=de_DE
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -data /rzhome/olglapid/z-drive/5 Semester/Verteilte Systeme2 -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2017-03-20 09:58:51.734
+!MESSAGE Unable to load class 'org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon' from bundle '763'
+!STACK 0
+java.lang.ClassNotFoundException: org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon cannot be found by org.eclipse.ui.ide_3.11.0.v20150510-1749
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:439)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:352)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:344)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:573)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:102)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:73)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:50)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application.createE4Workbench(E4Application.java:283)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:620)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1488)
+!SESSION 2017-03-20 11:39:36.760 -----------------------------------------------
+eclipse.buildId=4.6.2.M20161124-1400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_DE
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2017-03-20 11:40:01.480
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.ui 2 0 2017-03-20 11:40:02.803
+!MESSAGE Warnings while parsing the key bindings from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.bindings' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-03-20 11:40:02.803
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.papyrus.revisiontool', id='org.eclipse.papyrus.revisiontool.commands.ReviewCreateHandler'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-03-20 11:40:02.803
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.papyrus.revisiontool', id='org.eclipse.papyrus.revisiontool.commands.deletereview'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-03-20 11:40:02.803
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.papyrus.revisiontool', id='org.eclipse.papyrus.revisiontool.commands.hookreview'
+
+!ENTRY org.eclipse.jface 2 0 2017-03-20 11:40:11.961
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-03-20 11:40:11.961
+!MESSAGE A conflict occurred for ALT+CTRL+T:
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.EditPropertiesCommand,Show Properties,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@469f8de2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.connector.local.command.launch,Open Local Terminal on Selection,
+		,
+		Category(org.eclipse.tm.terminal.view.ui.commands.category,Terminal Commands,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@14f13587,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-03-20 11:40:51.368
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'z:\'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.instantiations.eclipse 1 0 2017-03-20 11:41:01.830
+!MESSAGE StartupPlugin: could not add workbench property change listener (1) ... compatibility layer might not be installed.
+
+!ENTRY org.eclipse.ui 4 4 2017-03-20 11:41:03.091
+!MESSAGE Plug-in 'com.gwtplugins.gwt.eclipse.core' contributed an invalid Menu Extension (Path: 'com.gwtplugins.gdt.eclipse.suite.popupMenu.project' is invalid): com.gwtplugins.gwt.eclipse.core.popupMenu.project.gwtSettings
+
+!ENTRY org.eclipse.ui 4 4 2017-03-20 11:41:03.125
+!MESSAGE Plug-in 'com.gwtplugins.gwt.eclipse.core' contributed an invalid Menu Extension (Path: 'com.gwtplugins.gdt.eclipse.suite.popupMenu.project' is invalid): com.gwtplugins.gwt.eclipse.core.actions.GWTCompileProjectAction
+
+!ENTRY com.instantiations.eclipse 1 0 2017-03-20 12:42:12.346
+!MESSAGE StartupPlugin: could not remove workbench property change listener (1) ... workbench might already be shut down.
+!SESSION 2017-03-24 08:23:57.044 -----------------------------------------------
+eclipse.buildId=4.6.2.M20161124-1400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_DE
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -data Z:\5 Semester\Verteilte Systeme2 -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.ui 2 0 2017-03-24 08:24:00.167
+!MESSAGE Warnings while parsing the key bindings from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.bindings' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-03-24 08:24:00.167
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.papyrus.revisiontool', id='org.eclipse.papyrus.revisiontool.commands.ReviewCreateHandler'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-03-24 08:24:00.167
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.papyrus.revisiontool', id='org.eclipse.papyrus.revisiontool.commands.deletereview'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-03-24 08:24:00.167
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.papyrus.revisiontool', id='org.eclipse.papyrus.revisiontool.commands.hookreview'
+
+!ENTRY org.eclipse.jface 2 0 2017-03-24 08:24:04.944
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-03-24 08:24:04.944
+!MESSAGE A conflict occurred for ALT+CTRL+T:
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.connector.local.command.launch,Open Local Terminal on Selection,
+		,
+		Category(org.eclipse.tm.terminal.view.ui.commands.category,Terminal Commands,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3fa43b05,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.EditPropertiesCommand,Show Properties,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5083642c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-03-24 08:24:12.856
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'z:\'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.instantiations.eclipse 1 0 2017-03-24 08:24:15.606
+!MESSAGE StartupPlugin: could not add workbench property change listener (1) ... compatibility layer might not be installed.
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-24 08:27:37.178
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-24 08:27:37.192
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-24 09:11:52.169
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-24 09:11:52.181
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY com.instantiations.eclipse 1 0 2017-03-24 09:29:24.426
+!MESSAGE StartupPlugin: could not remove workbench property change listener (1) ... workbench might already be shut down.
+!SESSION 2017-03-24 10:00:18.013 -----------------------------------------------
+eclipse.buildId=4.6.2.M20161124-1400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_DE
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.ui 2 0 2017-03-24 10:00:40.069
+!MESSAGE Warnings while parsing the key bindings from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.bindings' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-03-24 10:00:40.069
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.papyrus.revisiontool', id='org.eclipse.papyrus.revisiontool.commands.ReviewCreateHandler'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-03-24 10:00:40.069
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.papyrus.revisiontool', id='org.eclipse.papyrus.revisiontool.commands.deletereview'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-03-24 10:00:40.069
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.papyrus.revisiontool', id='org.eclipse.papyrus.revisiontool.commands.hookreview'
+
+!ENTRY org.eclipse.jface 2 0 2017-03-24 10:01:13.125
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-03-24 10:01:13.125
+!MESSAGE A conflict occurred for ALT+CTRL+T:
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.connector.local.command.launch,Open Local Terminal on Selection,
+		,
+		Category(org.eclipse.tm.terminal.view.ui.commands.category,Terminal Commands,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@915ac5c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.EditPropertiesCommand,Show Properties,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3b60f14c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-03-24 10:03:12.670
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'z:\'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.instantiations.eclipse 1 0 2017-03-24 10:03:19.031
+!MESSAGE StartupPlugin: could not add workbench property change listener (1) ... compatibility layer might not be installed.
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-24 10:12:18.197
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-24 10:12:18.205
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY com.instantiations.eclipse 1 0 2017-03-24 10:33:47.928
+!MESSAGE StartupPlugin: could not remove workbench property change listener (1) ... workbench might already be shut down.
+!SESSION 2017-03-27 11:28:18.065 -----------------------------------------------
+eclipse.buildId=4.6.2.M20161124-1400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_DE
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.ui 2 0 2017-03-27 11:28:45.111
+!MESSAGE Warnings while parsing the key bindings from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.bindings' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-03-27 11:28:45.111
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.papyrus.revisiontool', id='org.eclipse.papyrus.revisiontool.commands.ReviewCreateHandler'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-03-27 11:28:45.111
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.papyrus.revisiontool', id='org.eclipse.papyrus.revisiontool.commands.deletereview'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-03-27 11:28:45.112
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.papyrus.revisiontool', id='org.eclipse.papyrus.revisiontool.commands.hookreview'
+
+!ENTRY org.eclipse.jface 2 0 2017-03-27 11:28:54.433
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-03-27 11:28:54.433
+!MESSAGE A conflict occurred for ALT+CTRL+T:
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.EditPropertiesCommand,Show Properties,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@776a3e76,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.connector.local.command.launch,Open Local Terminal on Selection,
+		,
+		Category(org.eclipse.tm.terminal.view.ui.commands.category,Terminal Commands,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@78a5c127,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-03-27 11:29:33.437
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'z:\'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.instantiations.eclipse 1 0 2017-03-27 11:29:44.049
+!MESSAGE StartupPlugin: could not add workbench property change listener (1) ... compatibility layer might not be installed.
+
+!ENTRY org.eclipse.ui 4 4 2017-03-27 11:29:45.168
+!MESSAGE Plug-in 'com.gwtplugins.gwt.eclipse.core' contributed an invalid Menu Extension (Path: 'com.gwtplugins.gdt.eclipse.suite.popupMenu.project' is invalid): com.gwtplugins.gwt.eclipse.core.popupMenu.project.gwtSettings
+
+!ENTRY org.eclipse.ui 4 4 2017-03-27 11:29:45.186
+!MESSAGE Plug-in 'com.gwtplugins.gwt.eclipse.core' contributed an invalid Menu Extension (Path: 'com.gwtplugins.gdt.eclipse.suite.popupMenu.project' is invalid): com.gwtplugins.gwt.eclipse.core.actions.GWTCompileProjectAction
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-27 11:59:52.419
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-27 11:59:52.427
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2017-03-27 12:02:57.672
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [BrokerTask [in [Working copy] Broker.java [in aqua.blatt1.broker [in src [in Aqualife]]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newNotPresentException(JavaElement.java:556)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:590)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:316)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:302)
+	at org.eclipse.jdt.internal.core.SourceRefElement.getSourceRange(SourceRefElement.java:218)
+	at org.eclipse.jdt.internal.core.Member.getJavadocRange(Member.java:291)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContentFromSource(JavadocContentAccess2.java:658)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:534)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:717)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:635)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:627)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:164)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:86)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:165)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2017-03-27 12:02:57.676
+!MESSAGE BrokerTask [in [Working copy] Broker.java [in aqua.blatt1.broker [in src [in Aqualife]]]] does not exist
+
+!ENTRY org.eclipse.ui 4 4 2017-03-27 12:10:12.101
+!MESSAGE Plug-in 'com.gwtplugins.gwt.eclipse.core' contributed an invalid Menu Extension (Path: 'com.gwtplugins.gdt.eclipse.suite.popupMenu.file' is invalid): com.gwtplugins.gwt.eclipse.core.actions.AddResourcesToClientBundleAction
+
+!ENTRY org.eclipse.ui 4 4 2017-03-27 12:10:16.510
+!MESSAGE Plug-in 'com.gwtplugins.gwt.eclipse.core' contributed an invalid Menu Extension (Path: 'com.gwtplugins.gdt.eclipse.suite.popupMenu.file' is invalid): com.gwtplugins.gwt.eclipse.core.actions.AddResourcesToClientBundleAction
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-27 12:10:20.564
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-27 12:10:20.567
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.ui 4 4 2017-03-27 12:19:35.036
+!MESSAGE Plug-in 'com.gwtplugins.gwt.eclipse.core' contributed an invalid Menu Extension (Path: 'com.gwtplugins.gdt.eclipse.suite.popupMenu.file' is invalid): com.gwtplugins.gwt.eclipse.core.actions.AddResourcesToClientBundleAction
+
+!ENTRY org.eclipse.ui 4 4 2017-03-27 12:20:42.980
+!MESSAGE Plug-in 'com.gwtplugins.gwt.eclipse.core' contributed an invalid Menu Extension (Path: 'com.gwtplugins.gdt.eclipse.suite.popupMenu.file' is invalid): com.gwtplugins.gwt.eclipse.core.actions.AddResourcesToClientBundleAction
+
+!ENTRY org.eclipse.ui 4 4 2017-03-27 12:21:29.742
+!MESSAGE Plug-in 'com.gwtplugins.gwt.eclipse.core' contributed an invalid Menu Extension (Path: 'com.gwtplugins.gdt.eclipse.suite.popupMenu.file' is invalid): com.gwtplugins.gwt.eclipse.core.actions.AddResourcesToClientBundleAction
+
+!ENTRY org.eclipse.ui 4 4 2017-03-27 12:21:47.567
+!MESSAGE Plug-in 'com.gwtplugins.gwt.eclipse.core' contributed an invalid Menu Extension (Path: 'com.gwtplugins.gdt.eclipse.suite.popupMenu.file' is invalid): com.gwtplugins.gwt.eclipse.core.actions.AddResourcesToClientBundleAction
+
+!ENTRY org.eclipse.ui 4 4 2017-03-27 12:22:41.243
+!MESSAGE Plug-in 'com.gwtplugins.gwt.eclipse.core' contributed an invalid Menu Extension (Path: 'com.gwtplugins.gdt.eclipse.suite.popupMenu.file' is invalid): com.gwtplugins.gwt.eclipse.core.actions.AddResourcesToClientBundleAction
+
+!ENTRY org.eclipse.launchbar.core 2 0 2017-03-27 12:30:57.087
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2017-03-27 12:30:57.091
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.core.variables 4 120 2017-03-27 12:30:58.966
+!MESSAGE Dynamic variable extension from bundle 'com.gwtplugins.gwt.eclipse.core' overrides existing extension variable 'unique_id' from bundle 'com.google.gwt.eclipse.core'
+
+!ENTRY com.instantiations.eclipse 1 0 2017-03-27 12:48:32.608
+!MESSAGE StartupPlugin: could not remove workbench property change listener (1) ... workbench might already be shut down.
+!SESSION 2017-03-27 13:09:24.565 -----------------------------------------------
+eclipse.buildId=4.6.2.M20161124-1400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_DE
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.ui 2 0 2017-03-27 13:09:30.168
+!MESSAGE Warnings while parsing the key bindings from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.bindings' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-03-27 13:09:30.168
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.papyrus.revisiontool', id='org.eclipse.papyrus.revisiontool.commands.ReviewCreateHandler'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-03-27 13:09:30.168
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.papyrus.revisiontool', id='org.eclipse.papyrus.revisiontool.commands.deletereview'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-03-27 13:09:30.168
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.papyrus.revisiontool', id='org.eclipse.papyrus.revisiontool.commands.hookreview'
+
+!ENTRY org.eclipse.jface 2 0 2017-03-27 13:09:38.408
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-03-27 13:09:38.408
+!MESSAGE A conflict occurred for ALT+CTRL+T:
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.EditPropertiesCommand,Show Properties,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@23bc69a1,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.connector.local.command.launch,Open Local Terminal on Selection,
+		,
+		Category(org.eclipse.tm.terminal.view.ui.commands.category,Terminal Commands,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@463e413b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-03-27 13:10:14.569
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'z:\'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.instantiations.eclipse 1 0 2017-03-27 13:10:29.373
+!MESSAGE StartupPlugin: could not add workbench property change listener (1) ... compatibility layer might not be installed.
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-27 13:17:04.194
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-27 13:17:04.197
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.recommenders.models.rcp 1 11 2017-03-27 13:17:04.630
+!MESSAGE The model index service was accessed either before it started or after it finished running.
+!STACK 0
+org.eclipse.recommenders.utils.Logs$LogTraceException
+	at org.eclipse.recommenders.utils.Logs$LogTraceException.newTrace(Logs.java:381)
+	at org.eclipse.recommenders.utils.Logs.log(Logs.java:134)
+	at org.eclipse.recommenders.utils.Logs.log(Logs.java:126)
+	at org.eclipse.recommenders.internal.models.rcp.EclipseModelIndex.suggest(EclipseModelIndex.java:212)
+	at org.eclipse.recommenders.models.SimpleModelProvider.acquireModel(SimpleModelProvider.java:70)
+	at org.eclipse.recommenders.models.PoolingModelProvider.access$0(PoolingModelProvider.java:1)
+	at org.eclipse.recommenders.models.PoolingModelProvider$ModelPoolFactoryMediator.makeObject(PoolingModelProvider.java:96)
+	at org.eclipse.recommenders.models.PoolingModelProvider$ModelPoolFactoryMediator.makeObject(PoolingModelProvider.java:1)
+	at org.apache.commons.pool.impl.GenericKeyedObjectPool.borrowObject(GenericKeyedObjectPool.java:1220)
+	at org.eclipse.recommenders.models.PoolingModelProvider.acquireModel(PoolingModelProvider.java:67)
+	at org.eclipse.recommenders.internal.calls.rcp.RcpCallModelProvider.acquireModel(RcpCallModelProvider.java:65)
+	at org.eclipse.recommenders.internal.calls.rcp.RcpCallModelProvider.acquireModel(RcpCallModelProvider.java:1)
+	at org.eclipse.recommenders.internal.models.rcp.PrefetchModelArchiveJob.run(PrefetchModelArchiveJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.instantiations.eclipse 1 0 2017-03-27 13:41:58.231
+!MESSAGE StartupPlugin: could not remove workbench property change listener (1) ... workbench might already be shut down.
+!SESSION 2017-03-31 08:15:11.273 -----------------------------------------------
+eclipse.buildId=4.6.2.M20161124-1400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_DE
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.ui 2 0 2017-03-31 08:16:52.393
+!MESSAGE Warnings while parsing the key bindings from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.bindings' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-03-31 08:16:52.393
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.papyrus.revisiontool', id='org.eclipse.papyrus.revisiontool.commands.ReviewCreateHandler'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-03-31 08:16:52.393
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.papyrus.revisiontool', id='org.eclipse.papyrus.revisiontool.commands.deletereview'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-03-31 08:16:52.393
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.papyrus.revisiontool', id='org.eclipse.papyrus.revisiontool.commands.hookreview'
+
+!ENTRY org.eclipse.jface 2 0 2017-03-31 08:17:13.607
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-03-31 08:17:13.607
+!MESSAGE A conflict occurred for ALT+CTRL+T:
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.EditPropertiesCommand,Show Properties,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@8749c08,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.connector.local.command.launch,Open Local Terminal on Selection,
+		,
+		Category(org.eclipse.tm.terminal.view.ui.commands.category,Terminal Commands,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5e56f24c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-03-31 08:18:38.390
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'z:\'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.instantiations.eclipse 1 0 2017-03-31 08:18:52.611
+!MESSAGE StartupPlugin: could not add workbench property change listener (1) ... compatibility layer might not be installed.
+
+!ENTRY com.instantiations.eclipse 1 0 2017-03-31 09:03:24.925
+!MESSAGE StartupPlugin: could not remove workbench property change listener (1) ... workbench might already be shut down.
+!SESSION 2017-04-03 11:35:22.306 -----------------------------------------------
+eclipse.buildId=4.6.2.M20161124-1400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_DE
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.ui 2 0 2017-04-03 11:35:40.965
+!MESSAGE Warnings while parsing the key bindings from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.bindings' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-04-03 11:35:40.965
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.papyrus.revisiontool', id='org.eclipse.papyrus.revisiontool.commands.ReviewCreateHandler'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-04-03 11:35:40.966
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.papyrus.revisiontool', id='org.eclipse.papyrus.revisiontool.commands.deletereview'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-04-03 11:35:40.966
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.papyrus.revisiontool', id='org.eclipse.papyrus.revisiontool.commands.hookreview'
+
+!ENTRY org.eclipse.jface 2 0 2017-04-03 11:35:50.602
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-04-03 11:35:50.602
+!MESSAGE A conflict occurred for ALT+CTRL+T:
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.EditPropertiesCommand,Show Properties,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3228b5a1,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.connector.local.command.launch,Open Local Terminal on Selection,
+		,
+		Category(org.eclipse.tm.terminal.view.ui.commands.category,Terminal Commands,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@a83c657,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-04-03 11:36:31.243
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'z:\'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.instantiations.eclipse 1 0 2017-04-03 11:36:38.350
+!MESSAGE StartupPlugin: could not add workbench property change listener (1) ... compatibility layer might not be installed.
+
+!ENTRY org.eclipse.jface.text 2 0 2017-04-03 11:41:34.874
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-04-03 11:41:34.884
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.launchbar.core 2 0 2017-04-03 11:44:21.237
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2017-04-03 11:44:21.245
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.core.variables 4 120 2017-04-03 11:44:23.258
+!MESSAGE Dynamic variable extension from bundle 'com.gwtplugins.gwt.eclipse.core' overrides existing extension variable 'unique_id' from bundle 'com.google.gwt.eclipse.core'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-04-03 11:51:16.986
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-04-03 11:51:17.010
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.ui 4 4 2017-04-03 12:32:28.993
+!MESSAGE Plug-in 'com.gwtplugins.gwt.eclipse.core' contributed an invalid Menu Extension (Path: 'com.gwtplugins.gdt.eclipse.suite.popupMenu.project' is invalid): com.gwtplugins.gwt.eclipse.core.popupMenu.project.gwtSettings
+
+!ENTRY org.eclipse.ui 4 4 2017-04-03 12:32:29.018
+!MESSAGE Plug-in 'com.gwtplugins.gwt.eclipse.core' contributed an invalid Menu Extension (Path: 'com.gwtplugins.gdt.eclipse.suite.popupMenu.project' is invalid): com.gwtplugins.gwt.eclipse.core.actions.GWTCompileProjectAction
