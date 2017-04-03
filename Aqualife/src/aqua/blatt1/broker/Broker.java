@@ -26,18 +26,13 @@ public class Broker {
 	static int NUM_THREADS = 5; // beispiel;
 	static ExecutorService executor = Executors.newFixedThreadPool(NUM_THREADS);
 	static ReadWriteLock lock = new ReentrantReadWriteLock();
-<<<<<<< HEAD
+
 	static volatile boolean poisoner = false;
 
 	public static void broker() {
 
 		while (!poisoner) {
-=======
 
-	public static void broker() {
-
-		while (true) {
->>>>>>> 40b3c360cc604cfc996ba04de7298feee1e64a42
 			Message message = endpoint.blockingReceive();
 			executor.execute(new BrokerTask(message));
 		}
@@ -53,16 +48,13 @@ public class Broker {
 
 		endpoint.send(sender, new RegisterResponse(id));
 		lock.writeLock().unlock();
-<<<<<<< HEAD
-		
+
 		NeighborUpdate update = new NeighborUpdate(sender);
 		InetSocketAddress neighborLeft = list.getLeftNeighorOf(list.indexOf(sender));
 		endpoint.send(neighborLeft, update);
-		
+
 		InetSocketAddress neighborRight = list.getRightNeighorOf(list.indexOf(sender));
 		endpoint.send(neighborRight, update);
-=======
->>>>>>> 40b3c360cc604cfc996ba04de7298feee1e64a42
 
 	}
 
@@ -84,21 +76,15 @@ public class Broker {
 
 	public static void deregister(DeregisterRequest deregisterRequest) {
 
-<<<<<<< HEAD
 		lock.writeLock().lock();
-=======
-		lock.writeLock().lock;
->>>>>>> 40b3c360cc604cfc996ba04de7298feee1e64a42
+
 		int index = list.indexOf(deregisterRequest.getId());
 
 		if (index != -1) {
 			list.remove(index);
 		}
-<<<<<<< HEAD
+
 		lock.writeLock().unlock();
-=======
-		lock.writeLock().unlock;
->>>>>>> 40b3c360cc604cfc996ba04de7298feee1e64a42
 
 	}
 
@@ -129,11 +115,9 @@ public class Broker {
 
 				deregister((DeregisterRequest) message.getPayload());
 
-<<<<<<< HEAD
 			} else if (message.getPayload() instanceof PoisonPill) {
 				poisoner = true;
-=======
->>>>>>> 40b3c360cc604cfc996ba04de7298feee1e64a42
+
 			}
 
 		}
@@ -142,7 +126,6 @@ public class Broker {
 		public void run() {
 			test();
 		}
-		
 
 	}
 }
